@@ -54,3 +54,47 @@ function calculatePercentage() {
         }, 1500);
     }
 }
+
+// 新增記憶功能函數
+function memoryAdd() {
+    try {
+        let currentValue = eval(currentInput);
+        memoryValue += currentValue;
+        console.log('Memory:', memoryValue);
+        // 可選：顯示提示
+        showMemoryIndicator();
+    } catch (error) {
+        console.error('Memory add error:', error);
+    }
+}
+
+function memorySubtract() {
+    try {
+        let currentValue = eval(currentInput);
+        memoryValue -= currentValue;
+        console.log('Memory:', memoryValue);
+        showMemoryIndicator();
+    } catch (error) {
+        console.error('Memory subtract error:', error);
+    }
+}
+
+function memoryRecall() {
+    currentInput = memoryValue.toString();
+    updateDisplay();
+}
+
+function memoryClear() {
+    memoryValue = 0;
+    console.log('Memory cleared');
+    hideMemoryIndicator();
+}
+
+// 可選：顯示記憶指示器
+function showMemoryIndicator() {
+    display.style.borderLeft = '5px solid #ff9800';
+}
+
+function hideMemoryIndicator() {
+    display.style.borderLeft = 'none';
+}
