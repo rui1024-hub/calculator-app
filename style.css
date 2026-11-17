@@ -43,7 +43,7 @@ button {
     padding: 20px;
     font-size: 1.2em;
     border: none;
-    background: #f0f0f0;
+    background: #91e6fc;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s;
@@ -59,7 +59,7 @@ button:active {
 
 .equals {
     background: #667eea;
-    color: white;
+    color: rgb(24, 70, 219);
     grid-row: span 2;
 }
 
